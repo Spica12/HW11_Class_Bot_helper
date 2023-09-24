@@ -44,7 +44,6 @@ class Name(Field):
 class Phone(Field):
 
     # Реалізація класу
-
     @Field.value.setter
     def value(self, value: str)-> None:
         if len(value) == 10:
@@ -67,9 +66,7 @@ class Record:
         else:
             self.birthday = Birthday(None)
         
-    
     # Реалізація класу
-
     def add_phone(self, number: str)-> None:
         self.phones.append(Phone(number))
 
